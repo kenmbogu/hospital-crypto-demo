@@ -54,14 +54,12 @@ python src/decrypt.py
 ### 1. Attacker intercepts email but fails
 He steals `f0457f1f...` ciphertext but it's unreadable. No private key = FAILS. Tampering = signature FAILS.
 
-![Attacker Fails]
-(01_attacker_fails.png)
+![Attacker Fails](01_attacker_fails.png)
 
 ### 2. Authorized doctor decrypts successfully
 Signature verified from Amina Fleming, original patient data recovered.
 
-![Doctor Decrypts]
-(02_doctor_decrypts_ok.png)
+![Doctor Decrypts](02_doctor_decrypts_ok.png)
 
 **Tech:** AES-256 + RSA + Digital Signature | Synthetic data only, no real PHI
 
