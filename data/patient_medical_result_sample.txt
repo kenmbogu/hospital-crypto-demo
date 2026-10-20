@@ -1,0 +1,11 @@
+HOSPITAL: Warri Central Hospital - CONFIDENTIAL - SYNTHETIC DATA
+Date: 2026-10-20
+Patient ID: WM-2026-0842
+
+Patient: Jane Doe (Sample)
+Test: Complete Blood Count
+Results: Hb 9.2 g/dL Low, WBC 11,200 High, Malaria Positive
+Doctor: Dr. John Peter
+Ordered by: Amina Fleming
+
+*** SYNTHETIC DATA FOR EDUCATION ONLY - NO REAL PHI ***
