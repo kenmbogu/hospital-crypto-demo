@@ -49,7 +49,6 @@ python src/attacker.py
 python src/decrypt.py
 
 
-
 ## Proof - Attack Fails, Doctor Succeeds
 
 ### 1. Attacker intercepts email but fails
