@@ -47,3 +47,14 @@ python src/attacker.py
 
 # 5. John decrypts
 python src/decrypt.py
+
+
+
+## Proof It Works
+Attacker intercepted but fails:
+![attacker](01_attacker_fails.png)
+
+Authorized doctor decrypts:
+![decrypt](02_doctor_decrypts_ok.png)
+
+
