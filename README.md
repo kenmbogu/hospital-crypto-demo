@@ -1,2 +1,49 @@
-# hospital-crypto-demo
-Educational demo: Hospital worker Amina fleming encrypts patient confidential medical results with Dr. john peter's public key to avoid unauthorized people viewing or getting access to it. Using cryptography i will show you how to encrypt data so that even when it's in transit it will be in unreadable format till it reaches it's destination 
+# Hospital Secure File Transfer - Cryptography Demo
+
+> What happens when a hospital email gets hijacked? This project proves that with proper encryption, stolen data is still useless.
+
+A practical simulation showing how **Hybrid Encryption (RSA + AES-GCM + Signatures)** protects patient medical results even when the communication channel is compromised.
+
+### The Story
+
+- **Amina Fleming (Hospital Worker):** Has a file `patient_medical_results.txt` that needs to be sent securely.
+- **Dr. John Peter (Doctor):** The recipient. Only he should be able to read the file.
+- **You (The Attacker):** You intercept the email and try to read or alter the file.
+
+### How It Works
+
+We use **Hybrid Encryption**, which is how real healthcare systems work:
+
+1. **Key Generation:** Both Amina and Dr. John generate RSA-2048 key pairs.
+2. **Encryption (Amina's side):**
+   - Generate random AES-256 key.
+   - Encrypt file with AES-GCM (fast + authenticated).
+   - Encrypt AES key with Dr. John's PUBLIC key (OAEP).
+   - Sign ciphertext with Amina's PRIVATE key (PSS) - proves origin.
+3. **Attack Simulation:** Attacker intercepts email. Without Dr. John's private key, data is unreadable. Tampering breaks signature.
+4. **Decryption (Dr. John's side):**
+   - Verify Amina's signature, decrypt AES key with his PRIVATE key, decrypt file.
+
+**Result:** Decrypted file == Original only for the legitimate doctor.
+
+### Project Structure
+
+
+
+### How to Run
+
+```bash
+# 1. Install
+pip install -r requirements.txt
+
+# 2. Generate keys for Amina and John
+python src/generate_keys.py
+
+# 3. Amina encrypts
+python src/encrypt.py
+
+# 4. Attacker tries (and fails)
+python src/attacker.py
+
+# 5. John decrypts
+python src/decrypt.py
