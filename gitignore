@@ -1,0 +1,8 @@
+# Keys - NEVER push private keys
+keys/
+*.pem
+*.key
+
+# Python
+__pycache__/
+venv/
