@@ -47,6 +47,7 @@ python src/attacker.py
 
 # 5. John decrypts
 python src/decrypt.py
+```
 
 
 ## Proof - Attack Fails, Doctor Succeeds
